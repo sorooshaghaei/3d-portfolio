@@ -1,3 +1,15 @@
+import {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Hero,
+  Navbar,
+  Works,
+  Tech,
+  StarsCanvas,
+} from "./components";
+
 const App = () => {
   return (
     <>
