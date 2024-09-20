@@ -8,6 +8,24 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 640px)");
+
+    // Update toggle state when screen size changes
+    const handleScreenChange = (e) => {
+      if (e.matches) {
+        setToggle(false); // Close the menu when the screen is wider than 640px
+      }
+    };
+
+    // Add event listener to media query
+    mediaQuery.addEventListener("change", handleScreenChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleScreenChange);
+    };
+  }, []);
+
   return (
     <>
       <nav
@@ -19,7 +37,7 @@ const Navbar = () => {
             className="flex items-center gap-2"
             onClick={() => {
               setActive("");
-              window.scrollTo(0.0);
+              window.scrollTo(0, 0);
             }}
           >
             <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
@@ -46,16 +64,14 @@ const Navbar = () => {
 
           <div className="sm:hidden flex flex-1 justify-end items-center">
             <img
-              src={toggle ? menu : close}
+              src={toggle ? close : menu}
               alt="menu"
               className="w-[28px] h-[28px] object-contain cursor-pointer"
-              onClick={() => {
-                setToggle(!toggle);
-              }}
+              onClick={() => setToggle(!toggle)}
             />
             <div
               className={`${
-                toggle ? "hidden" : "flex"
+                !toggle ? "hidden" : "flex"
               } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
             >
               <ul className="list-none flex justify-end items-start flex-col gap-4">
@@ -66,7 +82,7 @@ const Navbar = () => {
                       active === link.title ? "text-white" : "text-secondary"
                     } font-poppins font-medium cursor-pointer text-[16px]`}
                     onClick={() => {
-                      setToggle(!toggle);
+                      setToggle(false);
                       setActive(link.title);
                     }}
                   >
