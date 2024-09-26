@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
 import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
