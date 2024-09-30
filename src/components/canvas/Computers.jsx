@@ -41,9 +41,8 @@ const ComputersCanvas = () => {
   // 'isMobile' will store whether the viewport is less than or equal to 500px
   const [isMobile, setIsMobile] = useState(false);
 
-  // Using the useEffect hook to run the effect only once after the component mounts
   useEffect(() => {
-    // Create a media query to check if the viewport width is less than or equal to 500px
+    // add a listener to the changes of the screen size
     const mediaQuery = window.matchMedia("(max-width:500px)");
 
     // Set the initial value of 'isMobile' based on the current viewport width
