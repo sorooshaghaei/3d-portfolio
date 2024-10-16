@@ -2,6 +2,8 @@
 
 This project is a 3D portfolio built with React and utilizes several libraries to enhance the user experience. It showcases 3D models and includes animations for an interactive presentation.
 
+**Note**: This project is a copy of [Adrian Hajdin's 3D Developer Portfolio](https://github.com/adrianhajdin/project_3D_developer_portfolio) for learning 3D design with React.
+
 ## Table of Contents
 - [Technologies Used](#technologies-used)
 - [Project Setup](#project-setup)
