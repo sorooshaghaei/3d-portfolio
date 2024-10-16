@@ -39,10 +39,10 @@ npm install --legacy-peer-deps @react-three/fiber @react-three/drei maath react-
 After setting up the project, you can run it locally using:
 
 ```bash
-npm start
+npm run dev
 ```
 
-This will start the development server, and you can view the project in your browser at `http://localhost:3000`.
+This will start the development server, and you can view the project in your browser at `http://localhost:5173`.
 
 ## Design Choices
 ### Tilt Effect Configuration
