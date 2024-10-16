@@ -11,7 +11,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt
-      options={{ max: 45, scale: 1, speed: 450 }}
+      options={{ max: -45, scale: 1, speed: 450 }}
       className="xs:w-[250px] w-full"
     >
       <motion.div
