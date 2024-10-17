@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { Tilt } from "react-tilt";
@@ -7,6 +8,8 @@ import { styles } from "../styles";
 import { services } from "../constants";
 
 import { fadeIn, textVariant } from "../utils/motion";
+
+import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -20,7 +23,10 @@ const ServiceCard = ({ index, title, icon }) => {
       >
         <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
           <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className=" text-white text-[20px] font-bold text-center " > {title} </h3>
+          <h3 className=" text-white text-[20px] font-bold text-center ">
+            {" "}
+            {title}{" "}
+          </h3>
         </div>
       </motion.div>
     </Tilt>
@@ -55,7 +61,22 @@ const About = () => {
   );
 };
 
-export default About;
+export default SectionWrapper(About, "about");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // options={{ max: 45, scale: 1, speed: 450 }}
 // what does this do?
@@ -100,7 +121,7 @@ export default About;
 
 // div className="mt-20 flex flex-wrap gap-10"
 // what is flex-wrap and what is different from flex-block and other kinds of flex?
-// and what is gap-10? and could not we use padding or margine instead of this gap??
+// and what is gap-10? and could not we use padding or margie instead of this gap??
 // flex-wrap:
 // When you apply flex-wrap, child items wrap onto new lines if they can’t all fit on one line. Without flex-wrap, items will overflow the container in a single row.
 // Other flex properties like flex-nowrap force items onto a single row, regardless of overflow.
