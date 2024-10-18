@@ -22,6 +22,9 @@ const SectionWrapper = (Component, idName) =>
         // Applying additional styles using Tailwind CSS and the imported styles object.
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
       >
+        <span className="hash-span" id={idName}>
+          &nbsp;
+        </span>
         <Component />
       </motion.section>
     );
@@ -45,3 +48,6 @@ export default SectionWrapper;
 
 // once: true: This ensures that the animation happens only the first time the element becomes visible. Once it's animated, it won't repeat on subsequent scrolls.
 // amount: 0.25: This specifies how much of the element needs to be visible in the viewport before the animation starts. In this case, 25% of the section must be visible before the animation is triggered.
+
+// &nbsp;
+// This is an HTML entity that stands for "non-breaking space". It's a special space character that doesn’t collapse like regular spaces in HTML. In this case, it's used to ensure that the span element has some content, even though it’s invisible. Without content, some browsers might ignore or collapse the empty element, so &nbsp; is added to prevent that.
