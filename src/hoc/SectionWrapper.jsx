@@ -22,9 +22,11 @@ const SectionWrapper = (Component, idName) =>
         // Applying additional styles using Tailwind CSS and the imported styles object.
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
       >
+        {/* for scroll down button */}
         <span className="hash-span" id={idName}>
           &nbsp;
         </span>
+
         <Component />
       </motion.section>
     );
