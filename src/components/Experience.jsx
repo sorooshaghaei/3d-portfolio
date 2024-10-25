@@ -16,6 +16,9 @@ import {
 import "react-vertical-timeline-component/style.min.css"; // Required CSS for VerticalTimeline components' style
 
 // Component for each experience card in the timeline
+// Implicit Return: You hand over the sandwich immediately without saying anything.
+// Explicit Return: You say, "Here’s your sandwich," and then hand it over.
+// for ExperienceCard because we have just one element, we do not need to use 'return' and it is a Implicit Return
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     // Card's content background and text color styles
