@@ -106,7 +106,7 @@ const experiences = [
     title: "Community Manager",
     company_name: "Blue White coworking space",
     icon: blueWhite,
-    iconBg: "#383E56",
+    iconBg: "white",
     date: "August 2022 - November 2022",
     points: [
       "Development and maintenance of front-end applications using React.js and Bootstrap.",
