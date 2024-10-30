@@ -13,9 +13,9 @@ import {
   git,
   figma,
   docker,
-  carrent,
-  jobit,
-  tripguide,
+  health_hub,
+  smtp_pop3,
+  tic_tac_toe,
   threejs,
   blueWhite,
 } from "../assets";
@@ -145,9 +145,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "health hub",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Health-Hub is a web application for healthcare management. It helps users manage patient records, schedule appointments, and visualize medical data with an intuitive dashboard. Enhance provider coordination and streamline patient information tracking.",
     tags: [
       {
         name: "react",
@@ -162,29 +162,29 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: health_hub,
+    source_code_link: "https://github.com/sorooshaghaei/health-hub",
   },
   {
-    name: "Job IT",
+    name: "SMTP and POP3 Email App",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Sending emails via SMTP, receiving emails via POP3, displaying received messages in a clean interface.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "smtp",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "pop3",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: smtp_pop3,
+    source_code_link: "https://github.com/sorooshaghaei/smtp-pop3-with-python",
   },
   {
     name: "Trip Guide",
@@ -192,11 +192,11 @@ const projects = [
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "js",
         color: "green-text-gradient",
       },
       {
@@ -204,8 +204,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: tic_tac_toe,
+    source_code_link: "https://github.com/sorooshaghaei/react-tic-tac-toe",
   },
 ];
 

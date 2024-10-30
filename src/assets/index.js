@@ -21,9 +21,9 @@ import threejs from "./tech/threejs.svg";
 
 import blueWhite from "./company/blueWhite.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import health_hub from "./health_hub.png";
+import smtp_pop3 from "./smtp_pop3.png";
+import tic_tac_toe from "./tic_tac_toe.png";
 
 export {
   logo,
@@ -46,7 +46,7 @@ export {
   tailwind,
   threejs,
   blueWhite,
-  carrent,
-  jobit,
-  tripguide,
+  health_hub,
+  smtp_pop3,
+  tic_tac_toe,
 };
