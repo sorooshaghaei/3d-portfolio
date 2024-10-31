@@ -119,27 +119,19 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Soroosh proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
       "I've never met a web developer who truly cares about their clients' success like Soroosh does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: "Keith Richards",
+    designation: "Electric Guitar Player",
+    company: "ROLLING STONES",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Keith-Richards-1965.jpg/340px-Keith-Richards-1965.jpg",
   },
   {
     testimonial:
-      "After Soroosh optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "After Soroosh optimized our website, our traffic increased by 50%. We can't thank him enough!",
+    name: "Wong Kar-wai",
+    designation: "ScreenWriter",
+    company: "BLK2",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Wong_Kar-wai_Berlin_cropped.jpg/440px-Wong_Kar-wai_Berlin_cropped.jpg",
   },
 ];
 
