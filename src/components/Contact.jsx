@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
 import { useRef, useState } from "react";
 
@@ -26,15 +27,9 @@ const Contact = () => {
   const handleSubmit = (e) => {};
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex-gap overflow-hidden">
-      {/* earth canvas */}
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
-      </motion.div>
-
+    <div
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+    >
       {/* form contact */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
@@ -49,48 +44,54 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4 ">Your Name</span>
+            <span className="text-white font-medium mb-4">Your Name</span>
             <input
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium "
               type="text"
               name="name"
-              placeholder="Your name here..."
               value={form.name}
               onChange={handleChange}
+              placeholder="Your name here..."
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
-
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4 ">Your Email</span>
+            <span className="text-white font-medium mb-4">Your email</span>
             <input
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium "
               type="email"
               name="email"
-              placeholder="Your email here..."
               value={form.email}
               onChange={handleChange}
+              placeholder="Your email here..."
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
-
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4 ">Your Message</span>
+            <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
-              rows="7"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium "
+              rows={7}
               name="message"
-              placeholder="Your message here..."
               value={form.message}
               onChange={handleChange}
+              placeholder="Your message here..."
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+      </motion.div>
+
+      {/* earth canvas on the right */}
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
       </motion.div>
     </div>
   );
