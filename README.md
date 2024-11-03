@@ -92,5 +92,5 @@ w-16 h-16
 
 **Why use gap instead of padding or margin?**: `gap` is generally easier to manage for spacing between flex items, as it applies consistent spacing without adding extra padding or margin around the entire container. If you used padding or margin, you would need to set spacing individually for each child, which can be less efficient.
 
-- **why mesh and isQuery and isMobile**: so we use <mesh></mesh> when we need to control the light.
+**why mesh and isQuery and isMobile**: so we use <mesh></mesh> when we need to control the light.
 we use mediaQuery and isMobile for the objects that cannot simply become responsive with just class properties.
