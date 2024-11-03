@@ -91,3 +91,6 @@ w-16 h-16
 - **gap-10**: This sets the spacing between child elements in the flex container. `gap-10` means there is a space of 40px between each item (since 10 is multiplied by 4px). Unlike padding or margin, which affects spacing relative to the element’s container, `gap` only controls spacing between flex children.
 
 **Why use gap instead of padding or margin?**: `gap` is generally easier to manage for spacing between flex items, as it applies consistent spacing without adding extra padding or margin around the entire container. If you used padding or margin, you would need to set spacing individually for each child, which can be less efficient.
+
+- **why mesh and isQuery and isMobile**: so we use <mesh></mesh> when we need to control the light.
+we use mediaQuery and isMobile for the objects that cannot simply become responsive with just class properties.
