@@ -13,6 +13,11 @@ const Stars = (props) => {
   // This creates a Float32Array of 5000 values, representing 3D coordinates (x, y, z)
   const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
 
+  useFrame((state, delta) => {
+    ref.current.rotation.x -= delta / 10;
+    ref.current.rotation.y -= delta / 15;
+  });
+
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points
