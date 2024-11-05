@@ -21,10 +21,94 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
 
-  // for functionality (later on will be complemented)
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  // Handles changes in form inputs and updates state
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+
+    // Remove errors when fields are corrected
+    setErrors({ ...errors, [name]: "" });
+  };
+
+  // Check for valid input before submission
+  const validateForm = () => {
+    const newErrors = {};
+    let isValid = true;
+
+    // Check for empty name
+    if (!form.name.trim()) {
+      newErrors.name = "Please enter a valid name.";
+      isValid = false;
+    }
+
+    // Check for empty email
+    if (!form.email.trim()) {
+      newErrors.email = "Please enter your email.";
+      isValid = false;
+    }
+
+    // Check for empty or too short message (20 words minimum)
+    const wordCount = form.message.trim().split(/\s+/).length;
+    if (!form.message.trim() || wordCount < 20) {
+      newErrors.message = "Message must be at least 20 words.";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  // Handles form submission with emailJS integration
+  const handleSubmit = (e) => {
+    e.preventDefault(); // prevents page reload
+
+    // Validate form before sending
+    if (!validateForm()) {
+      const errorMessages = Object.entries(errors)
+        .filter(([_, msg]) => msg)
+        .map(([field, msg]) => `${msg}`)
+        .join("\n");
+
+      alert(
+        `Please address the following issues before submitting:\n\n${errorMessages}`
+      );
+      return;
+    }
+
+    setLoading(true);
+
+    emailJs
+      .send(
+        "service_1udg5lg",
+        "template_dqdqsof",
+        {
+          from_name: form.name,
+          to_name: "Soroosh",
+          from_email: form.email,
+          to_email: "soroosh77aghaei@yahoo.com",
+          message: form.message,
+        },
+        "9w-ab5-Kz7o2KAsxy"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Your message has been sent successfully!");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error("Failed to send message:", error);
+          alert("Something went wrong. Please try again.");
+        }
+      );
+  };
 
   return (
     <div
@@ -53,6 +137,7 @@ const Contact = () => {
               placeholder="Your name here..."
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.name && <span className="text-red-500">{errors.name}</span>}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
@@ -64,6 +149,9 @@ const Contact = () => {
               placeholder="Your email here..."
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.email && (
+              <span className="text-red-500">{errors.email}</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
@@ -75,6 +163,9 @@ const Contact = () => {
               placeholder="Your message here..."
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.message && (
+              <span className="text-red-500">{errors.message}</span>
+            )}
           </label>
 
           <button
