@@ -37,9 +37,13 @@ const Contact = () => {
     const newErrors = {};
     let isValid = true;
 
-    // Check for empty name
+    // Check for empty or invalid name
     if (!form.name.trim()) {
       newErrors.name = "Please enter a valid name.";
+      isValid = false;
+    } else if (/[^a-zA-Z\s]/.test(form.name)) {
+      newErrors.name =
+        "Name must not contain special characters (e.g., @, #, $, etc.).";
       isValid = false;
     }
 
