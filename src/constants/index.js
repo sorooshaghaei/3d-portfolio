@@ -15,7 +15,6 @@ import {
   docker,
   health_hub,
   smtp_pop3,
-  tic_tac_toe,
   threejs,
   blueWhite,
 } from "../assets";
