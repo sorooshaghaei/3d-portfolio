@@ -178,7 +178,6 @@ const projects = [
     image: smtp_pop3,
     source_code_link: "https://github.com/sorooshaghaei/smtp-pop3-with-python",
   },
-  
 ];
 
 export { services, technologies, experiences, testimonials, projects };
