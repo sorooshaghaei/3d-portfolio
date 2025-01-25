@@ -49,7 +49,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Data Science Learner",
     icon: creator,
   },
 ];
@@ -178,27 +178,7 @@ const projects = [
     image: smtp_pop3,
     source_code_link: "https://github.com/sorooshaghaei/smtp-pop3-with-python",
   },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tic_tac_toe,
-    source_code_link: "https://github.com/sorooshaghaei/react-tic-tac-toe",
-  },
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };
