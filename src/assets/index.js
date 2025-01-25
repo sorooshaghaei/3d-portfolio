@@ -23,7 +23,6 @@ import blueWhite from "./company/blueWhite.png";
 
 import health_hub from "./health_hub.png";
 import smtp_pop3 from "./smtp_pop3.png";
-import tic_tac_toe from "./tic_tac_toe.png";
 
 export {
   logo,
@@ -48,5 +47,4 @@ export {
   blueWhite,
   health_hub,
   smtp_pop3,
-  tic_tac_toe,
 };
