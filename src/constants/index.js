@@ -106,7 +106,7 @@ const experiences = [
     company_name: "Blue White coworking space",
     icon: blueWhite,
     iconBg: "white",
-    date: "August 2022 - November 2022",
+    date: "August 2022 - October 2022",
     points: [
       "Development and maintenance of front-end applications using React.js and Bootstrap.",
       "Collaboration with a team in a coworking environment, enhancing skills in responsive web design and UI/UX principles.",
